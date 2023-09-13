@@ -1,0 +1,129 @@
+<!DOCTYPE html5>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="AKRD Karunadasa" />
+    <title>Optimize Task Manager | Ease your Project Management</title>
+    <link rel="stylesheet" href="style/styles.css">
+    <script src="scripts/script.js" defer></script>
+</head>
+<body>
+    <main>
+        <div class="top-bar">
+            <div class="top-barHeading">
+                <h1>Optimize Task Manager</h1>
+            </div>
+            <div class="HomePage-search">
+                <div class="search-container">
+                    <form action="/action_page.php">
+                      <input type="text" placeholder="Search.." name="search">
+                      <button type="submit"><img src="img/search.png"<i class="fa fa-search"></i></button>
+                    </form>
+                  </div>
+            </div>
+            <div class="HomePage-DiscussionBtn">
+                <a href="DiscussionForum.html"><img src="/img/discussionForum.png" alt="DiscussionForumIcon"></a>
+            </div>
+            <div class="HomePage-userProfile">
+                <a href="#"><img src="/img/user.png" alt="UserProfileIcon"></a>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div id="menu"> <!--Side menu bar-->
+        
+                <div class="logo">
+                    <a href="HomePage.html"><img src="/img/logo.png" alt="Logo"></a>
+                </div>
+        
+                <ul>
+                    <li><a href="HomePage.html">Home</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Projects</a>
+                        <div class="submenu"> <!--Projects Submenu-->
+                            <ul>
+                                <li><a href="#">Create Project</a></li>
+                                <li><a href="#">Projects</a></li>
+                                <li><a href="#">On-going Projects</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>Tasks
+                        <div class="submenu"> <!--Tasks Submenu-->
+                            <ul>
+                                <li><a href="#">Create Task</a></li>
+                                <li><a href="#">Create sub task</a></li>
+                                <li><a href="#">Completed Tasks</a></li>
+                                <li><a href="#">On-going Tasks</a></li>
+                                <li><a href="#">Unassigned Tasks</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">Team</a></li>
+                    <li>Support
+                        <div class="submenu"> <!--Tasks Submenu-->
+                            <ul>
+                                <li><a href="/Support/FAQs.html">FAQs</a></li>
+                                <li><a href="/Support/PrivacyPolicy.html">Privacy Policy</a></li>
+                                <li><a href="/Support/TermsAndConditions.html">Terms and Conditions</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>Documentation</li>
+                </ul>
+            </div>
+        </div>
+        <div class="FAQsContainer">
+            <div class="faq">
+                
+                <h3 onclick="toggleAnswer(1)">How do I create a new project?</h3>
+                <p id="answer1" class="answer">To kickstart your project in the "Optimize Task Manager," follow these simple steps: First, log in to your "Optimize Task Manager" account. Next, click on the option to create a new project. Give your project a name, like "Optimize Task Manager Demo Project." You can also customize your project's settings, such as privacy options or team visibility, as needed. Finally, click "Create" to initiate your new project board.</p>
+            </div>
+    
+            <div class="faq">
+                <h3 onclick="toggleAnswer(2)">Can I invite team members to my project?</h3>
+                <p id="answer2">In your "Optimize Task Manager," seamlessly invite team members to your project. Access your project board and locate the option to invite members. Enter the email addresses of your desired team members and specify their roles and permissions if necessary. Then, send the invitations, and your team members will receive them promptly.</p>
+            </div>
+    
+            <div class="faq">
+                <h3 onclick="toggleAnswer(3)">How do I set project deadlines?</h3>
+                <p id="answer3">Inside your project board, you can effortlessly add due dates to specific tasks or cards representing your project's deadlines. Open a card or task, and you'll find a straightforward option to set a due date. Define the desired due date for the task or milestone with ease.</p>
+            </div>
+    
+            <div class="faq">
+                <h3 onclick="toggleAnswer(4)">What is the difference between tasks and milestones?</h3>
+                <p id="answer4">In your "Optimize Task Manager," it's essential to distinguish between tasks and milestones. Tasks represent individual actions or work items required to reach your project goals, while milestones are pivotal points or accomplishments in your project timeline, often signifying phase completions or significant deadlines.</p>
+            </div>
+    
+            <div class="faq">
+                <h3 onclick="toggleAnswer(5)">How can I track project progress?</h3>
+                <p id="answer5">Stay on top of your project's advancement within the "Optimize Task Manager" by updating task or card statuses (e.g., to-do, in-progress, completed). Glance at your project boards to get an overview of task progress. Additionally, utilize reports or dashboards to visualize and monitor project metrics efficiently.</p>
+            </div>
+    
+            <div class="faq">
+                <h3 onclick="toggleAnswer(6)">Is there a mobile app available for project management?</h3>
+                <p id="answer6">Ensure you can manage your projects on the go with the "Optimize Task Manager" mobile app. Visit your preferred app store, whether it's the Apple App Store or Google Play Store, and search for the "Optimize Task Manager" app. Download and install the app to enjoy seamless project management on your mobile device.</p>
+            </div>
+        </div>
+    </main>
+
+    <div class="footer">
+        <div class="footer-left">
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms</a>
+            </div>
+            <p>&copy; 2023 Optimize Solutions. All rights reserved.</p>
+        </div>
+        
+        <div class="footer-right">
+            <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="img/linkedIn.png" alt="LinkedIn"></a>
+            <a href="#"><img src="img/twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="img/youtube.png" alt="YouTube"></a>
+        </div>
+    </div>
+</body>
+</html>
