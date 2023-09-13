@@ -5,30 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="AKRD Karunadasa" />
     <title>Optimize Task Manager | Ease your Project Management</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylesheet.css">
+    <!-- <link rel="stylesheet" href="os/style.css"> -->
     <link rel="stylesheet" href="style_2.css">
-    <script src="scripts/script.js" defer></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <div class="header-left">
-            <img src="img/logo.png" alt="Company Logo">
+    <main>
+        <div class="top-bar">
+            <div class="top-barHeading">
+                <h1>Optimize Task Manager</h1>
+            </div>
+            <div class="HomePage-search">
+                <div class="search-container">
+                    <form action="/action_page.php">
+                      <input type="text" placeholder="Search.." name="search">
+                      <button type="submit"><img src="img/search.png"<i class="fa fa-search"></i></button>
+                    </form>
+                  </div>
+            </div>
+            <div class="HomePage-DiscussionBtn">
+                <a href="#"><img src="/img/discussionForum.png" alt="DiscussionForumIcon"></a>
+            </div>
+            <div class="HomePage-userProfile">
+                <a href="#"><img src="/img/user.png" alt="UserProfileIcon"></a>
+            </div>
         </div>
-        <div class="header-middle">
-            <h1>Optimize Task Manager</h1>
+
+        <div class="wrapper">
+            <div id="menu"> <!--Side menu bar-->
+        
+                <div class="logo">
+                    <a href="HomePage.html"><img src="/img/logo.png" alt="Logo"></a>
+                </div>
+        
+                <ul>
+                    <li><a href="HomePage.html">Home</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Projects</a>
+                        <div class="submenu"> <!--Projects Submenu-->
+                            <ul>
+                                <li><a href="#">Create Project</a></li>
+                                <li><a href="#">Projects</a></li>
+                                <li><a href="#">On-going Projects</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>Tasks
+                        <div class="submenu"> <!--Tasks Submenu-->
+                            <ul>
+                                <li><a href="#">Create Task</a></li>
+                                <li><a href="#">Create sub task</a></li>
+                                <li><a href="#">Completed Tasks</a></li>
+                                <li><a href="#">On-going Tasks</a></li>
+                                <li><a href="#">Unassigned Tasks</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">Team</a></li>
+                    <li>Support
+                        <div class="submenu"> <!--Tasks Submenu-->
+                            <ul>
+                                <li><a href="FAQs.html">FAQs</a></li>
+                                <li><a href="PrivacyPolicy.html">Privacy Policy</a></li>
+                                <li><a href="TermsAndConditions.html">Terms and Conditions</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>Documentation</li>
+                </ul>
+            </div>
         </div>
-        <div class="header-right">
-            
-        </div>
-    </header>
+        <div class="HomePage-Container">
+
+
+
     
     <main>
         <!-- main page content goes here -->
         <div id="form" action="Project_Planning.html" method="POST">
            
-            <b><h1>New Project</h1></b>
+            <b><h1>New Task</h1></b>
               <!-- <div> -->
-                  <label id="label">Project Name -</label>
+                  <label id="label">Task Name -</label>
               </br>
                   <input 
                     type="text" 
@@ -52,18 +111,8 @@
                   />
             </br>
             </br>
-            <label id="label">Client Name -</label>
-        </br>
-            <input 
-              type="text" 
-              name="Client_Name" 
-              id="name" 
-              placeholder="Required"  
-              minlength="2"
-              required
-              />
-        </br>
-        </br>
+      
+      
                   <label id="label">Start Date -</label>
           
             </br>
@@ -104,7 +153,7 @@
         
         </br>
     </br>
-    <a href="Project_Planning.html">
+    <a href="Task_Planning.html">
               <!-- </div> -->
                   <input  
                         value="Next" 
@@ -119,8 +168,7 @@
 
       
     </main>
-
-    <footer>
+    <div class="footer">
         <div class="footer-left">
             <div class="footer-links">
                 <a href="#">Privacy Policy</a>
@@ -128,6 +176,14 @@
             </div>
             <p>&copy; 2023 Optimize Solutions. All rights reserved.</p>
         </div>
-    </footer>
+        
+        <div class="footer-right">
+            <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="img/linkedIn.png" alt="LinkedIn"></a>
+            <a href="#"><img src="img/twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="img/youtube.png" alt="YouTube"></a>
+        </div>
+    </div>
 </body>
 </html>
