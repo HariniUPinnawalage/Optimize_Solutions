@@ -1,74 +1,137 @@
 body {
-    background-image: url();
-    font-family: Arial, sans-serif;
+    background-image: url("/img/backgroundImage.jpg");
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
-    min-height: 200vh;
+    min-height: 100vh;
+    background-position: center;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 /* Header styling start */
-header {
-    /* background: linear-gradient(45deg, #ff6b00, #030100); Gradient background */
-    color: #fff;
-    padding: 20px 0;
+.top-bar {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
-    height: 30px;
-}
-
-header img{
-    width: 25px;
-    height: 25px;
-    margin-right: 10px;
-    padding: 15px;  
-}
-
-.header-left img {
-    width: 60px; 
-    height: 60px;
-    margin-left: 20px;
-}
-
-
-.header-middle h1 {
-    font-size: 1.5rem;
-    margin: 0;
-}
-
-.header-right {
-    display: flex;
-    align-items: center;
-    margin-right: 20px; /* Add margin to separate buttons from the right edge */
-}
-
-.btn-sign-in, .btn-sign-up {
-    background-color: transparent;
-    border: none;
+    height: 80px; 
+    background-color: #ff9801;
     color: #fff;
-    cursor: pointer;
-    font-size: 1rem;
-    margin-left: 10px; /* Add spacing between buttons */
+    padding-left: 250px;
+    margin-bottom: 10px;
+}
+/* --------End of top bar----------- */
+.logo img {
+    display: block;
+    max-width: 100%;
+    height: 80px;
+    margin-top: 10px; /* Center logo and create spacing */
 }
 
-/* Style buttons on hover */
-.btn-sign-in:hover,
-.btn-sign-up:hover {
-    text-decoration: underline;
+.HomePage-search{
+    overflow: hidden;
+    border-radius: 10px;
+    padding-left: 10px;
+    margin-left: 150px;
+  }
+  
+  .HomePage-search a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .HomePage-search img{
+    width: 20px;
+    height: 20px;
+  }
+  
+  .HomePage-search a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .HomePage-search a.active {
+    background-color: #2196F3;
+    color: white;
+  }
+  
+  .HomePage-search.search-container {
+    float: right;
+  }
+  
+  .HomePage-search input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+  }
+  
+  .HomePage-search .search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .HomePage-search .search-container button:hover {
+    background: #ccc;
+  }
+
+.HomePage-DiscussionBtn{
+    width: 50px;
+    height: 50px;
+    /* background-color: fuchsia; */
+}
+
+.HomePage-DiscussionBtn img{
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+}
+
+.HomePage-userProfile{
+    width: 50px;
+    height: 50px;
+    /* background-color:red; */
+    margin-right: 50px;
+}
+
+.HomePage-userProfile img{
+    width: 40px;
+    height: 40px;
+    padding: 5px;
 }
 /* Header styling end */
 
 main {
-    flex-grow: 3;
-    height:100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
+#backgroundImage{
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+
+}
 
 /* Footer styling start */
-footer {
-    /* background-color: #fb7911; */
+.footer {
+    background-color: #fff;
     color: #030100;
     padding: 20px 0;
     display: flex;
@@ -76,12 +139,15 @@ footer {
     align-items: center;
     height: 12px;
     font-weight: bold;
+    position:relative;
+    clear: both;
+    margin-top: 0;
+    padding-left: 10px;
 }
 
 .footer-left {
     display: flex; /* Display its children inline */
     align-items: center; /* Center vertically */
-    padding: 10px;
     font-size: smaller;
 }
 
@@ -104,9 +170,1092 @@ footer {
     padding: 15px;
 }
 
-/* Style links on hover */
 .footer-links a:hover {
     text-decoration: underline;
 }
 
 /* Footer styling end */
+
+/* HomePage.html styling start */
+.wrapper {
+    display: flex;
+    width: 200px;
+    height: 100%;
+}
+
+.wrapper a{
+    text-decoration: none;
+    font-style: normal;
+    color: white;
+}
+
+
+/* --------Start of Side menu bar----------- */
+#menu { 
+    width: 220px;
+    height: 100%;
+    background-color: #ff9801;
+    color: #ffffff;
+    position: fixed; /* Fixed positioning */
+    top: 0;
+    left: 0;
+    align-items: stretch;
+}
+
+.logo img {
+    display: block;
+    height: 150px;
+    width: 150px;
+    height: auto;
+    margin: 0 auto /* Center logo and create spacing */
+}
+
+#menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+}
+
+#menu ul li {
+    padding: 10px 10px;
+    border: 1px solid #a4341e; 
+    border-radius: 10px; /* Rounded corners */
+    margin-bottom: 5px; 
+}
+
+#menu ul li:hover {
+    background-color: #ef4927; /* Side menu bar hover colour*/
+}
+/* --------End of Side menu bar----------- */
+
+
+
+/* --------Start of Submenu bar----------- */
+.submenu {
+    display: none; /* Submenu is not displayed all the time*/
+    background-color: #f65231; 
+    border-radius: 10px;
+    padding-left: 8px;
+    padding-right: 2px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.submenu ul li {
+    margin-top: 2px; 
+    margin-bottom: 2px; 
+}
+
+#menu ul li:hover .submenu {
+    display: block; /* Display submenus item on hover*/
+}
+/* --------Start of Submenu bar----------- */
+
+
+/* Content area to the right */
+.content {
+    flex-grow: 1; /* Grow to fill available space */
+    padding: 20px; /* Add padding for spacing */
+    margin-left: 220px; /* Adjust to accommodate menu width and spacing */
+    overflow-y: auto; /* Enable scrolling if content overflows vertically */
+}
+
+.HomePage-Container{
+    width: 1100px;
+    margin-left: 220px;
+
+}
+
+.HomePage-Username{
+    height: 30px;
+    vertical-align: middle;
+    padding-left: 5px;
+    padding-top: 5px;
+    background-color: #ccc;
+    width: 350px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.HomePage-MyProjects{
+    height: 350px;
+    width: 700px;
+    border-color: #030100;
+    text-align: left;
+    padding-left: 10px;
+    background-color: floralwhite;
+    margin-left: 10px;
+    float: left;
+    border: 1px solid
+
+}
+
+.HomePage-MyProjects-Project1{
+    height: 100px;
+    width: 200px;
+    float:left;
+}
+
+.HomePage-MyProjects-Project1-Name{
+    background-color: #fb6911;
+    height: 60%;
+    width: 95%;
+    padding-left: 5%;
+}
+
+.HomePage-MyProjects-Project1-Date{
+    background-color: green;
+    height: 40%;
+    width: 95%;
+    padding-left: 5%;
+}
+
+.HomePage-MyProjects-Project2{
+    padding-left: 30px;
+    height: 100px;
+    width: 200px;
+    float:left;
+}
+
+.HomePage-MyProjects-Project2-Name{
+    background-color: #fb6911;
+    height: 60%;
+    width: 95%;
+    padding-left: 5%;
+}
+
+.HomePage-MyProjects-Project2-Date{
+    background-color: green;
+    height: 40%;
+    width: 95%;
+    padding-left: 5%;
+}
+
+.HomePage-MyProjects-Project3{
+    padding-left: 30px;
+    height: 100px;
+    width: 200px;
+    float:left;
+}
+
+.HomePage-MyProjects-Project3-Name{
+    background-color: #fb6911;
+    height: 60%;
+    width: 95%;
+    padding-left: 5%;
+}
+
+.HomePage-MyProjects-Project3-Date{
+    background-color: green;
+    height: 40%;
+    width: 95%;
+    padding-left: 5%;
+}
+
+.HomePage-MyProjects-Project4{
+    padding-top: 30px;
+    height: 100px;
+    width: 200px;
+    float:left;
+}
+
+.HomePage-MyProjects-Project4-Name{
+    background-color: #fb6911;
+    height: 60%;
+    width: 95%;
+    padding-left: 5%;
+}
+
+.HomePage-MyProjects-Project4-Date{
+    background-color: green;
+    height: 40%;
+    width: 95%;
+    padding-left: 5%;
+}
+
+.HomePage-MyProjects-Project5{
+    padding-left: 30px;
+    padding-top: 30px;
+    height: 100px;
+    width: 200px;
+    float:left;
+}
+
+.HomePage-MyProjects-Project5-Name{
+    background-color: #fb6911;
+    height: 60%;
+    width: 95%;
+    padding-left: 5%;
+}
+
+.HomePage-MyProjects-Project5-Date{
+    background-color: green;
+    height: 40%;
+    width: 95%;
+    padding-left: 5%;
+}
+
+.HomePage-MyProjects-Project6{
+    padding-left: 30px;
+    padding-top: 30px;
+    height: 100px;
+    width: 200px;
+    float:left;
+}
+
+.HomePage-MyProjects-Project6-Name{
+    background-color: #fb6911;
+    height: 60%;
+    width: 95%;
+    padding-left: 5%;
+}
+
+.HomePage-MyProjects-Project6-Date{
+    background-color: green;
+    height: 40%;
+    width: 95%;
+    padding-left: 5%;
+}
+
+.HomePage-Timeline{
+    height: 350px;
+    width: 300px;
+    border-color: #030100;
+    text-align: left;
+    padding-left: 10px;
+    background-color: aquamarine;
+    float:right;
+    margin-left: 10px;
+    margin-top: 0px;
+    border: 1px solid black;
+}
+
+.HomePage-Timeline h5{
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+.HomePage-Timeline-Task1{
+    height: 50px;
+    width: 280px;
+    margin: 5px;
+    background-color: #a4341e;
+    align-items: center;
+}
+
+.HomePage-Timeline-Task1-Name{
+    height: 90%;
+    width: 65%;
+    padding-left: 2%;
+    background-color: #eee;
+    float: left;
+}
+
+.HomePage-Timeline-Task1-Date{
+    height: 90%;
+    width: 30%;
+    background-color: blueviolet;
+    float: left;
+    padding-left: 3%;
+}
+
+.HomePage-Timeline-Task2{
+    height: 50px;
+    width: 280px;
+    margin: 5px;
+    background-color: #a4341e;
+    align-items: center;
+}
+
+.HomePage-Timeline-Task2-Name{
+    height: 90%;
+    width: 65%;
+    padding-left: 2%;
+    background-color: #eee;
+    float: left;
+}
+
+.HomePage-Timeline-Task2-Date{
+    height: 90%;
+    width: 30%;
+    background-color: blueviolet;
+    float: left;
+    padding-left: 3%;
+}
+
+.HomePage-Timeline-Task3{
+    height: 50px;
+    width: 280px;
+    margin: 5px;
+    background-color: #a4341e;
+    align-items: center;
+}
+
+.HomePage-Timeline-Task3-Name{
+    height: 90%;
+    width: 65%;
+    padding-left: 2%;
+    background-color: #eee;
+    float: left;
+}
+
+.HomePage-Timeline-Task3-Date{
+    height: 90%;
+    width: 30%;
+    background-color: blueviolet;
+    float: left;
+    padding-left: 3%;
+}
+
+.HomePage-Timeline-Task4{
+    height: 50px;
+    width: 280px;
+    margin: 5px;
+    background-color: #a4341e;
+    align-items: center;
+}
+
+.HomePage-Timeline-Task4-Name{
+    height: 90%;
+    width: 65%;
+    background-color: #eee;
+    float: left;
+    padding-left: 2%;
+}
+
+.HomePage-Timeline-Task4-Date{
+    height: 90%;
+    width: 30%;
+    background-color: blueviolet;
+    float: left;
+    padding-left: 3%;
+}
+
+.HomePage-Timeline-Task5{
+    height: 50px;
+    width: 280px;
+    margin: 5px;
+    background-color: #a4341e;
+    align-items: center;
+}
+
+.HomePage-Timeline-Task5-Name{
+    height: 90%;
+    width: 65%;
+    background-color: #eee;
+    float: left;
+    padding-left: 2%;
+}
+
+.HomePage-Timeline-Task5-Date{
+    height: 90%;
+    width: 30%;
+    background-color: blueviolet;
+    float: left;
+    padding-left: 3%;
+}
+
+.HomePage-RecentTasks{
+    height: 350px;
+    width: 700px;
+    border-color: #030100;
+    text-align: left;
+    padding-left: 10px;
+    background-color: aquamarine;
+    margin-top: 10px;
+    margin-left: 10px;
+    float: left;
+    border: 1px solid black;
+}
+
+.HomePage-RecentTasks-Task1{
+height: 100px;
+width: 200px;
+float:left;
+}
+
+.HomePage-RecentTasks-Task1-Name{
+background-color: #fb6911;
+height: 60%;
+width: 95%;
+padding-left: 5%;
+}
+
+.HomePage-RecentTasks-Task1-Date{
+background-color: green;
+height: 40%;
+width: 95%;
+padding-left: 5%;
+}
+
+.HomePage-RecentTasks-Task2{
+padding-left: 30px;
+height: 100px;
+width: 200px;
+float:left;
+}
+
+.HomePage-RecentTasks-Task2-Name{
+background-color: #fb6911;
+height: 60%;
+width: 95%;
+padding-left: 5%;
+}
+
+.HomePage-RecentTasks-Task2-Date{
+background-color: green;
+height: 40%;
+width: 95%;
+padding-left: 5%;
+}
+
+.HomePage-RecentTasks-Task3{
+padding-left: 30px;
+height: 100px;
+width: 200px;
+float:left;
+}
+
+.HomePage-RecentTasks-Task3-Name{
+background-color: #fb6911;
+height: 60%;
+width: 95%;
+padding-left: 5%;
+}
+
+.HomePage-RecentTasks-Task3-Date{
+background-color: green;
+height: 40%;
+width: 95%;
+padding-left: 5%;
+}
+
+.HomePage-RecentTasks-Task4{
+padding-top: 30px;
+height: 100px;
+width: 200px;
+float:left;
+}
+
+.HomePage-RecentTasks-Task4-Name{
+background-color: #fb6911;
+height: 60%;
+width: 95%;
+padding-left: 5%;
+}
+
+.HomePage-RecentTasks-Task4-Date{
+background-color: green;
+height: 40%;
+width: 95%;
+padding-left: 5%;
+}
+
+.HomePage-RecentTasks-Task5{
+padding-left: 30px;
+padding-top: 30px;
+height: 100px;
+width: 200px;
+float:left;
+}
+
+.HomePage-RecentTasks-Task5-Name{
+background-color: #fb6911;
+height: 60%;
+width: 95%;
+padding-left: 5%;
+}
+
+.HomePage-RecentTasks-Task5-Date{
+background-color: green;
+height: 40%;
+width: 95%;
+padding-left: 5%;
+}
+
+.HomePage-RecentTasks-Task6{
+padding-left: 30px;
+padding-top: 30px;
+height: 100px;
+width: 200px;
+float:left;
+}
+
+.HomePage-RecentTasks-Task6-Name{
+background-color: #fb6911;
+height: 60%;
+width: 95%;
+padding-left: 5%;
+}
+
+.HomePage-RecentTasks-Task6-Date{
+background-color: green;
+height: 40%;
+width: 95%;
+padding-left: 5%;
+}
+
+.HomePage-Meetings{
+        height: 350px;
+        width: 300px;
+        border-color: #030100;
+        text-align: left;
+        padding-left: 10px;
+        background-color: aquamarine;
+        float:right;
+        margin-left: 10px;
+        margin-top: 10px;
+        border: 1px solid black;
+}
+
+.HomePage-Meetings a{
+    font-size: 14px;
+}
+
+.HomePage-Meetings h5{
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+.HomePage-Meetings-Date{
+    width: 100px;
+    background-color: #fb6911;
+    padding-left: 20px;
+}
+
+.HomePage-Meetings-Day1-Meeting1{
+    height: 50px;
+    width: 280px;
+    margin: 5px;
+    background-color: #a4341e;
+    align-items: center;
+}
+
+.HomePage-Meetings-Day1-Meeting1-Name{
+    height: 90%;
+    width: 65%;
+    background-color: #eee;
+    float: left;
+    padding-left: 2%;
+}
+
+.HomePage-Meetings-Day1-Meeting1-Date{
+    height: 90%;
+    width: 30%;
+    background-color: blueviolet;
+    float: left;
+    padding-left: 3%;
+}
+
+.HomePage-Meetings-Day1-Meeting2{
+    height: 50px;
+    width: 280px;
+    margin: 5px;
+    background-color: #a4341e;
+    align-items: center;
+}
+
+.HomePage-Meetings-Day1-Meeting2-Name{
+    height: 90%;
+    width: 65%;
+    background-color: #eee;
+    float: left;
+    padding-left: 2%;
+}
+
+.HomePage-Meetings-Day1-Meeting2-Date{
+    height: 90%;
+    width: 30%;
+    background-color: blueviolet;
+    float: left;
+    padding-left: 3%;
+}
+.HomePage-Meetings-Day2-Meeting1{
+    height: 50px;
+    width: 280px;
+    margin: 5px;
+    background-color: #a4341e;
+    align-items: center;
+}
+
+.HomePage-Meetings-Day2-Meeting1-Name{
+    height: 90%;
+    width: 65%;
+    background-color: #eee;
+    float: left;
+    padding-left: 2%;
+}
+
+.HomePage-Meetings-Day2-Meeting1-Date{
+    height: 90%;
+    width: 30%;
+    background-color: blueviolet;
+    float: left;
+    padding-left: 3%;
+}
+.HomePage-Meetings-Day2-Meeting2{
+    height: 50px;
+    width: 280px;
+    margin: 5px;
+    background-color: #a4341e;
+    align-items: center;
+}
+
+.HomePage-Meetings-Day2-Meeting2-Name{
+    height: 90%;
+    width: 65%;
+    background-color: #eee;
+    float: left;
+    padding-left: 2%;
+}
+
+.HomePage-Meetings-Day2-Meeting2-Date{
+    height: 90%;
+    width: 30%;
+    background-color: blueviolet;
+    float: left;
+    padding-left: 3%;
+}
+
+/* HomePage.html styling end */
+
+/* PrivacyPolicy.html styling start */
+.privacy-policy {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    padding-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    height: 1250px;
+    margin-left: 300px;
+  }
+  
+  .privacy-policy h2 {
+    font-size: 24px;
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  .privacy-policy p {
+    font-size: 16px;
+    line-height: 1.5;
+    /* margin-bottom: 20px; */
+  }
+  
+  .privacy-policy ul {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  
+  .privacy-policy ol {
+    list-style-type: decimal;
+    margin-left: 20px;
+  }
+/* PrivacyPolicy.html styling end */
+
+/* FAQs.html styling start*/
+.FAQscontainer {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq {
+    margin-bottom: 20px;
+    transition: all 2s ease-in;
+    border-radius: 10px;
+}
+
+.faq h3 {
+    cursor: pointer;
+    background-color: #eee;
+    padding: 10px;
+    margin: 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 600px;
+}
+
+.faq p {
+    display: none;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-top: none;
+    margin: 0;
+}
+
+.faq h3:hover {
+    background-color: #ddd;
+}
+
+#answer1, #answer2, #answer3, #answer4, #answer5, #answer6 {
+    width: 600px;
+    height: fit-content;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+#answer1, #answer2, #answer3, #answer4, #answer5, #answer6 p {
+    margin: 0;
+}
+/* FAQs.html styling end*/
+
+/* TermsAndConditions.html styling start */
+.terms-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    padding-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    height: 2250px;
+    margin-left: 250px;
+  }
+  
+  .terms-section h4 {
+    padding-bottom: 5px;
+    margin: 0px;
+    color: #fb6911;
+  }
+  
+  .terms-section p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+/* TermsAndConditions.html styling end */
+
+/* SignIn.html styling start */
+
+
+
+/* SignIn.html styling end */
+
+.SignIn-header{
+    text-align: left;
+    vertical-align:text-top;
+    padding: 2% 0 0;
+    font-size: 15px;
+    
+  }
+  
+.SignIn-page {
+    width: 420px;
+    height:200px;
+    padding: 2% 0 0;
+    margin-top: 5%;
+    align-self: center;
+}
+
+.SignIn-form{
+    border-radius: 25px;
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    width: 330px;
+    height: 280px;
+    margin: 0 auto 0px;
+    padding: 0 38px 60px ;
+    text-align: left;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  }
+
+.SignIn-form input {
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 12px;
+  }
+
+.SignIn-form button {
+    outline: 0;
+    background: #ff9801;
+    width: 30%;
+    border: 0;
+    padding: 11px;
+    color: #FFFFFF;
+    font-size: 15px;
+    position: absolute;
+    top: 238px;
+    left: 245px;
+    font-family:monospace;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    cursor: pointer;
+}
+
+.SignIn-form button:hover,.SignIn-form button:active,.SignIn-form button:focus {
+    background: #000000;
+}
+
+.SignIn-form .SignIn-AccountMessage {
+    margin: 120px 0 0;
+    color: #615d5d;
+    font-size: 12px;
+}
+
+.SignIn-form .SignIn-AccountMessage a {
+    color: #0dadd4;
+    text-decoration: none;
+}
+  
+.SignIn-form .SignIn-ForgotMessage {
+    margin:-63px 239px 0px;
+    color: #b3b3b3;
+    font-size: 10px;
+    width: 30%;
+}
+  .SignIn-form .SignIn-ForgotMessage a {
+    color: #0dadd4;
+    text-decoration: none;
+  }
+
+
+/* SingUp.html styling start */
+
+.SignUp-container{
+    margin-top: 100px;
+    height: 80%;
+    width: 35%;
+    align-self: center;
+}
+
+.SignUp-top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px; 
+    background-color: #ff9801;
+    color: #fff;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.SignUp-LogoImg img{
+    margin-left: 0;
+    width: 250px;
+    height: 100px;
+    /* background-color: #030100; */
+}
+
+.SignUp-header{
+    text-align: left;
+    vertical-align:text-top;
+    width: 458px;
+    height: 60px;
+    margin: 0 auto 0px; 
+    font-size: 15px; 
+}
+
+.SignUp-form {
+    position: relative;
+    z-index: 1;
+    background: #ffffff;
+    width: 372px;
+    height: 384px;
+    margin: 0 auto 100px;
+    padding: 0 41px 84px ;
+    text-align: center;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.24);
+}
+  
+#SignUp-name{
+    top: 5%;
+    left: 13px;
+    position: absolute;
+}
+
+#SignUp-fname{
+    width: 205px;
+    height: 30px;
+    top: 45px;
+    left: 11px;
+    position: absolute;
+    font-family:monospace;
+}
+  
+#SignUp-lname{
+    width: 205px;
+    height: 30px;
+    top: 45px;
+    left: 229px;
+    position: absolute;
+    font-family:monospace;
+}
+  
+#SignUp-email{
+    top: 19%;
+    left: 13px;
+    position: absolute;
+}
+  
+#SignUp-email-input{
+    width: 422px;
+    height: 30px;
+    top: 113px;
+    left: 13px;
+    position: absolute;
+    font-family:monospace;
+}
+  
+#SignUp-dob{
+    top:34%;
+    left: 13px;
+    position: absolute;
+}
+  
+#SignUp-dob-input{
+    width: 205px;
+    height: 32px;
+    top: 181px;
+    left: 13px;
+    position: absolute;
+    font-family:monospace;
+}
+
+#SignUp-office{
+    top:34%;
+    left: 229px;
+    position: absolute;
+}
+  
+#SignUp-office-input{
+    width: 212px;
+    height: 35px;
+    top: 181px;
+    left: 229px;
+    position: absolute;
+    font-family:monospace;
+}
+
+#SignUp-password{
+    top: 48%;
+    left: 13px;
+    position: absolute;
+}
+  
+#SignUp-password-input{
+    width: 420px;
+    height: 32px;
+    top: 246px;
+    left: 13px;
+    position: absolute;
+}
+  
+#SignUp-confpassword{
+    top:63%;
+    left: 13px;
+    position: absolute;
+}
+  
+#SignUp-confpassword-input{
+    width: 420px;
+    height: 32px;
+    top: 316px;
+    left: 13px;
+    position: absolute;
+}
+  
+.SignUp-terms{
+    top:360px;
+    left: 13px;
+    position: absolute;
+}
+  
+.SignUp-form button {  
+    outline: 0;
+    background: #ff9801;
+    width: 30%;
+    border: 0;
+    padding: 11px;
+    color: #FFFFFF;
+    font-size: 15px;
+    position: absolute;
+    top: 400px;
+    left: 285px;
+    font-family:monospace;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);    
+    cursor: pointer;
+}
+
+.SignUp-form button:hover,.SignUp-form button:active,.SignUp-form button:focus {
+    background: #000000;
+}
+  
+.SignUp-form .SignUp-terms a {
+    color: #0dadd4;
+    text-decoration: none;
+}
+  
+.SignUp-form .SignUp-terms checkbox{
+    top: 400px;
+    left: 285px;
+    position: absolute;
+}
+
+/* SignUp.html styling end */
+
+/* LandingPage.html styling start */
+.LandingPage-top-bar {
+    display: flex;
+    align-items: center;
+    height: 100px; 
+    background-color: #ff9801;
+    color: #fff;
+    padding-left: 0px;
+    margin-bottom: px;
+}
+
+.LandingPage-top-barHeading{
+    margin-left: 14%;
+}
+
+.LandingPageLogIn{
+    height: 30px;
+    width: 100px;
+    margin-left: 23%;
+}
+
+.LandingPageSignUp{
+    height: 30px;
+    width: 100px;
+    margin-left: 2%;
+    margin-right: 1%;
+}
+
+.LandingPageLogInBtn {  
+    background: #ff9801;
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    cursor: pointer;
+}
+
+.LandingPageLogIn button:hover{
+    background: #ccc;
+}
+
+.LandingPageSignUpBtn {  
+    background: #ff9801;
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    cursor: pointer;
+}
+
+.LandingPageSignUpBtn button:hover{
+    background: #ccc;
+}
+
+/* LandingPage.htl styling end */
+
